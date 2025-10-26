@@ -12,7 +12,6 @@
       --glass: rgba(255,255,255,0.06);
       --accent: rgba(255,255,255,0.12);
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -24,7 +23,6 @@
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
     }
-
     /* Background lights */
     .lights-wrap{
       position:fixed;
@@ -50,13 +48,11 @@
     .light.blue  { background: radial-gradient(circle at 40% 40%, rgba(90,180,255,0.95) 0%, rgba(40,120,255,0.7) 25%, transparent 50%); right:-12%; top:5%; animation-duration:20s; }
     .light.red   { background: radial-gradient(circle at 60% 40%, rgba(255,100,120,0.95) 0%, rgba(220,40,60,0.7) 25%, transparent 50%); left:10%; bottom:-10%; animation-duration:24s; }
     .light.green { background: radial-gradient(circle at 60% 60%, rgba(120,255,160,0.95) 0%, rgba(20,200,100,0.7) 25%, transparent 50%); right:8%; bottom:-18%; animation-duration:26s; }
-
     @keyframes float{
       0%{ transform: translate3d(0,0,0) scale(1); filter: blur(120px) saturate(120%); }
       50%{ transform: translate3d(6vw,-4vh,0) scale(1.08); filter: blur(100px) saturate(160%); }
       100%{ transform: translate3d(-6vw,6vh,0) scale(.96); filter: blur(140px) saturate(140%); }
-    }
-
+    }  
     /* Main content */
     .wrap{
       position:relative;
@@ -66,8 +62,7 @@
       align-items:center;
       justify-content:center;
       padding:48px;
-    }
-
+    } 
     .card{
       width:100%;
       max-width:980px;
@@ -82,11 +77,9 @@
       align-items:center;
       flex-wrap:wrap;
     }
-
     .hero{
       flex:1 1 420px;
     }
-
     /* Glowing translucent blurred text */
     .title{
       font-size: clamp(36px, 6.6vw, 72px);
@@ -98,8 +91,7 @@
       color: rgba(255,255,255,0.92);
       -webkit-font-smoothing:antialiased;
     }
-
-    /* duplicate pseudo glow behind text for blurred white shine */
+     /* duplicate pseudo glow behind text for blurred white shine */
     .title::after{
       content:attr(data-text);
       position:absolute;
@@ -112,7 +104,6 @@
       width:100%;
       pointer-events:none;
     }
-
     /* animated white shine sweep */
     .title::before{
       content:"";
@@ -126,15 +117,13 @@
       animation: shine 4.5s ease-in-out infinite;
       pointer-events:none;
     }
-
-    @keyframes shine{
+      @keyframes shine{
       0%{ transform: translateX(-120%) skewX(-12deg); opacity:0; }
       20%{ opacity:.7; }
       50%{ transform: translateX(120%) skewX(-12deg); opacity:1; }
       80%{ opacity:.6; }
       100%{ transform: translateX(120%) skewX(-12deg); opacity:0; }
     }
-
     .subtitle{
       margin:0 0 22px 0;
       color: rgba(255,255,255,0.7);
@@ -142,7 +131,6 @@
       max-width:70ch;
       font-size:clamp(14px,1.8vw,18px);
     }
-
     .meta{
       display:flex;
       gap:12px;
@@ -160,8 +148,7 @@
       border:1px solid rgba(255,255,255,0.04);
       backdrop-filter: blur(6px);
     }
-
-    /* right column example */
+     /* right column example */
     .aside{
       width:300px;
       min-width:220px;
@@ -180,23 +167,19 @@
       font-weight:600;
       color:rgba(255,255,255,0.9);
       border:1px solid rgba(255,255,255,0.02);
-    }
-
+    } 
     /* responsive */
     @media (max-width:760px){
       .card{ padding:28px; gap:18px; }
       .aside{ width:100%; min-width:unset; order:2; }
       .hero{ order:1; }
     }
-
     /* reduce motion preference */
     @media (prefers-reduced-motion: reduce){
       .light{ animation: none; }
       .title::before{ animation: none; opacity: .8; }
     }
-  </style>
-</head>
-<body>
+     
   <div class="lights-wrap" aria-hidden="true">
     <div class="light purple"></div>
     <div class="light blue"></div>
@@ -217,8 +200,7 @@
           <span class="badge">Kontak • kelas92,smp muhammadiyah 37.id</span>
         </div>
       </section>
-
-      <aside class="aside" aria-labelledby="aside-title">
+       <aside class="aside" aria-labelledby="aside-title">
         <h3 id="aside-title" style="margin:0 0 12px 0; font-size:16px; font-weight:700; color:rgba(255,255,255,0.95)">Agenda Mendatang</h3>
         <ul class="list">
           <li>kapan jalan jalan? — gak tau kwkwk</li>
